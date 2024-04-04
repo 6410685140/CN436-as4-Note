@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
-struct NoteApp: App {
+struct NoteAppApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
